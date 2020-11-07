@@ -1,0 +1,80 @@
+
+.text-wrapper {
+    width: fit-content;
+    // padding: 50px;
+    div {
+        width: 100%;
+        float: left;
+    }
+    h1 {
+        font-size: 6vw;
+        color: white;
+        font-family: main-font;
+        font-weight: 400;
+        width: fit-content;
+        float: left;
+    }
+    .pointer {
+        width: 2px;
+        height: 6vw;
+        float: left;
+        // position: absolute;
+        // bottom: 0;
+        // right: 0;
+        background-color: white;
+        animation: blink 1s step-start 0s infinite;
+        -webkit-animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+          opacity: 0.0;
+        }
+      }
+      @-webkit-keyframes blink {
+        50% {
+          opacity: 0.0;
+        }
+      }
+}
+
+.small-text {
+  width: fit-content;
+    div {
+        width: 100%;
+        float: left;
+    }
+    h1 {
+        font-size: 4vw;
+        color: white;
+        font-family: main-font;
+        font-weight: 400;
+        width: fit-content;
+        float: left;
+        transition: font-size 800ms ease;
+    }
+    .pointer {
+        display: none;
+    }
+}
+
+.trans {
+  transition: ease 30ms;
+}
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  .text-wrapper {
+    h1 {
+      font-size: 9vw;
+    }
+    .pointer {
+      height: 9vw;
+    }
+  }
+  .small-text {
+    h1 {
+      font-size: 9vw;
+    }
+  }
+}

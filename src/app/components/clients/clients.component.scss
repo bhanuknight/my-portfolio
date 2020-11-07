@@ -1,0 +1,115 @@
+.clients-wrapper {
+  width: 100%;
+  float: left;
+  font-family: main-font;
+  height: 76vh;
+  overflow: auto;
+  .client-box {
+    width: 100%;
+    margin: 4% 0;
+    display: flex;
+    .info {
+      width: 45%;
+      margin-right: 5%;
+      transition: all .3s ease;
+      .logo {
+        width: 200px;
+        margin-bottom: 30px;
+        img {
+          width: 100%;
+        }
+      }
+      .summary, .tech-stack {
+        width: 100%;
+        font-size: 2vh;
+        color: gray;
+        margin-bottom: 40px;
+      }
+      a {
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .visual {
+      width: 50%;
+      height: 45vh;
+      .video-box {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .visual2 {
+      width: 50%;
+      height: 70vh;
+      .video-box {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          animation: scroll 30s infinite;
+          animation-timing-function: linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  from {transform: translateY(0);}
+  to {transform: translateY(-80%);}
+}
+
+#scroll-box::-webkit-scrollbar {
+  width: 6px;
+  // background-color: #F5F5F5;
+}
+
+#scroll-box::-webkit-scrollbar-thumb {
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+#scroll-box::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: rgba($color: #000000, $alpha: 0.0);
+}
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  .clients-wrapper {
+    height: 95vh;
+    .client-box {
+      flex-wrap: wrap;
+      margin: 0;
+      .info {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .logo {
+          width: 20vh;
+          margin-bottom: 15px;
+        }
+        .summary, .tech-stack {
+          margin-bottom: 40px;
+        }
+      }
+      .visual {
+        width: 100%;
+        height: 40vh;
+      }
+      .visual2 {
+        width: 100%;
+        height: 70vh;
+      }
+    }
+  }
+}

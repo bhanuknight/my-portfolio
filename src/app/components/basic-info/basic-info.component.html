@@ -1,0 +1,12 @@
+<div [ngClass]="{'text-wrapper': !state, 'small-text': state}">
+    <h1>{{strList[0]}}</h1><div class="pointer" *ngIf="!bol1"></div>
+    <div *ngIf="bol1">
+        <h1>{{strList[1]}}</h1><div class="pointer" *ngIf="!bol2"></div>
+    </div>
+    <div *ngIf="bol2" [@fadeInOut]>
+        <h1>{{strList[2]}}</h1><div class="pointer" *ngIf="!bol3"></div>
+    </div>
+    <div *ngIf="bol3" [@fadeInOut]>
+        <h1>{{strList[3]}}</h1><div class="pointer"></div>
+    </div>
+</div>

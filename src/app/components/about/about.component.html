@@ -1,0 +1,24 @@
+<div class="content-wrapper" *ngIf="show" [@fadeInOut]>
+    <p>
+        I’m a web developer and a graphic designer born and raised
+        in Delhi, India. With a focus on UI/UX interfaces and
+        interactive design I’ve been able to create some visually
+        appealing websites for my clients.
+    </p>
+
+    <h2>Professional Skills</h2>
+    <p>Web development, UI/UX, Graphic design, Team management</p>
+    <!-- <div class="radios">
+        <button class="button" (click)="showCV = true">
+            My Resume
+            <div class="button__horizontal"></div>
+            <div class="button__vertical"></div>
+        </button>
+    </div> -->
+</div>
+
+<div class="pdf-wrapper" *ngIf="showCV">
+    <div class="close" (click)="showCV = false">✖</div>
+    <object data="../../../assets/CV - Bhanu Singh.pdf" type="application/pdf" width="300" height="200">
+    </object>
+</div>

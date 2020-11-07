@@ -1,0 +1,194 @@
+.wrapper {
+  width: 100vw;
+  padding-top: 12vh;
+  padding-left: 16vh;
+  float: left;
+  font-family: main-font;
+  .page-name {
+    width: 100%;
+    font-size: 6.5vh;
+    float: left;
+    color: whitesmoke;
+  }
+  .hyphen {
+    width: calc(10% - 40px);
+    float: left;
+    padding-top: 6vh;
+    border-bottom: 2px solid#616161;
+    margin-right: 30px;
+  }
+  .tag-line {
+    width: 90%;
+    float: left;
+    font-size: 11vh;
+    color:#616161;
+  }
+  .form {
+    width: 40%;
+    margin-top: 3vh;
+    float: left;
+    .heading {
+      width: 100%;
+      float: left;
+      color: #afafaf;
+      font-size: 4vh;
+    }
+    .radios {
+      width: 100%;
+      float: left;
+      margin-top: 30px;
+      .radio-button {
+        width: 32%;
+        margin-right: 2%;
+        border: 1px solid #616161;
+        color: whitesmoke;
+        font-size: 2.3vh;
+        text-align: center;
+        padding: 15px 0;
+        float: left;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      .selected {
+        background: #616161;
+      }
+    }
+    .input-group {
+      width: 100%;
+      margin-top: 20px;
+      float: left;
+      .half {
+        width: calc(50% - 5px);
+        margin-right: 10px;
+        float: left;
+        input {
+          width: 100%;
+          background: none;
+          border: none;
+          border-bottom: 1px solid #afafaf;
+          font-size: 2.3vh;
+          color: #afafaf;
+          padding-top: 15px;
+          font-family: main-font;
+        }
+      }
+      .full {
+        width: 100%;
+        float: left;
+        margin-top: 20px;
+        textarea {
+          width: 100%;
+          background: none;
+          border: none;
+          border-bottom: 1px solid #afafaf;
+          font-size: 2.3vh;
+          color: #afafaf;
+          padding-top: 15px;
+          font-family: main-font;
+        }
+      }
+      .submit {
+        float: left;
+        padding: 15px 50px;
+        padding-left: 0;
+        color: whitesmoke;
+        margin-top: 20px;
+        background: none;
+        border: none;
+        font-family: main-font;
+        cursor: pointer;
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .hint {
+    width: 30%;
+    float: left;
+    margin-top: 3vh;
+    p {
+      font-size: 2.3vh;
+      width: 64%;
+      float: left;
+      color: #7b7b7b;
+      margin-left: 7%;
+      margin-top: 8vh;
+      line-height: 3vh;
+    }
+  }
+}
+
+.not {
+  position: fixed;
+  left: 40%;
+  bottom: 20%;
+  width: -webkit-max-content;
+  width: max-content;
+  padding: 20px;
+  color: black;
+  background: white;
+  border-radius: 10px;
+  font-family: main-font;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 0 10px black;
+}
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  .wrapper {
+    padding: 4vw;
+    box-sizing: border-box;
+    .page-name {
+      font-size: 4.5vh;
+    }
+    .hyphen {
+      display: none;
+    }
+    .tag-line {
+      display: none;
+    }
+    .form {
+      width: 100%;
+      margin-top: 0;
+      .heading {
+        font-size: 3vh;
+      }
+      .radios {
+        margin-top: 20px;
+        .radio-button {
+          font-size: unset;
+          width: 100%;
+          margin-top: -1px;
+          /* margin-bottom: 10px; */
+          padding: 10px 0;
+        }
+      }
+      .input-group {
+        margin-top: 30px;
+        .full {
+          textarea {
+            padding: 0;
+          }
+        }
+      }
+      .submit {
+        margin-top: 15px;
+      }
+    }
+    .hint {
+      width: 100%;
+      margin-top: 3vh;
+      text-align: justify;
+      p {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}

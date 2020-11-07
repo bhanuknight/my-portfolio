@@ -1,0 +1,20 @@
+<div class="nav-wrapper">
+    <ul class="ul">
+        <li (click)="emitNav('about')" class="one">
+            About
+            <div class="underline" [ngClass]="{'underline-active' : currentNav == 'about'}"></div>
+        </li>
+        <li (click)="emitNav('clients')" class="two">
+            Works
+            <div class="underline" [ngClass]="{'underline-active' : currentNav == 'clients'}"></div>
+        </li>
+        <li (click)="emitNav('portraits')" class="three">
+            Portraits
+            <div class="underline" [ngClass]="{'underline-active' : currentNav == 'portraits'}"></div>
+        </li>
+        <li (click)="emitNav('contact')" class="four">
+            Contact
+            <div class="underline" [ngClass]="{'underline-active' : currentNav == 'contact'}"></div>
+        </li>
+    </ul>
+</div>

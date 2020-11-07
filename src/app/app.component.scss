@@ -1,0 +1,313 @@
+
+.main-board {
+    width: 100vw;
+    height: 100vh;
+    background: #121212;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 1.4s ease;
+    .text-wrap {
+        // width: 50%;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+        z-index: 1;
+    }
+
+    .side-wrap {
+        // width: 50%;
+        position: absolute;
+        top: 10vh;
+        left: 6vh;
+        transition: all 800ms ease;
+        z-index: 1;
+    }
+
+    .frame-wrap {
+        width: 40vh;
+        position: absolute;
+        right: 6vh;
+        bottom: 10%;
+        z-index: 1;
+    }
+    .social-wrap {
+        position: absolute;
+        top: 8%;
+        right: 6.5vh;
+        z-index: 1000;
+    }
+    .nav-wrap {
+        position: absolute;
+        bottom: 9vh;
+        left: 0;
+        transform: translateY(0);
+        transition: all 1s ease;
+        z-index: 1000;
+    }
+    .top-nav {
+        transform: translateY(-80vh);
+        transition: all 1s ease;
+        transition-delay: .7s;
+    }
+    .about-wrap {
+        position: absolute;
+        top: 30vh;
+        left: 6.5vh;
+    }
+    .clients-wrap {
+        width: 100%;
+        float: left;
+        padding: 0 5vh;
+        box-sizing: border-box;
+        margin-top: 20vh;
+        position: absolute;
+    }
+    .port-wrap {
+        width: 100%;
+        float: left;
+        padding: 0 5vh;
+        box-sizing: border-box;
+        margin-top: 15vh;
+        position: absolute;
+    }
+    .contact-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        height: 100vh;
+        animation-name: bordered;
+        animation-direction: forwards;
+        animation-duration: 1s;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+
+@keyframes bordered {
+    0% {
+        border-left: 2px solid grey;
+        border-right: 2px solid grey;
+        height: 0;
+        top: 50vh;
+    }
+    50% {
+        border-left: 2px solid grey;
+        border-right: 2px solid grey;
+    }
+    55% {
+        border-left: 0;
+        border-right: 0;
+    }
+    100% {
+        height: 100vh;
+        top: 0;
+    }
+}
+
+.whiten {
+    background-color: #ededed;
+    transition: background-color 2s ease;
+}
+
+@media screen and (orientation:portrait) {
+    /* Portrait styles */
+    .main-board {
+        .text-wrap {
+            top: 35%;
+            left: 7%;
+        }
+        .side-wrap {
+            top: 5vw;
+            left: 4vw;
+        }
+        .frame-wrap {
+            right: 0;
+            bottom: unset;
+            top: 14vh;
+            z-index: 0;
+        }
+        .social-wrap {
+            top: unset;
+            right: 3.3vh;
+            bottom: 4vh;
+            position: fixed;
+        }
+        .nav-wrap {
+            display: none;
+        }
+        .top-nav {
+        }
+        .about-wrap {
+            top: 15vh;
+            left: 4.5vw;
+        }
+        .clients-wrap {
+            padding: 0 3vh;
+            margin-top: 5vh;
+        }
+        .port-wrap {
+            margin-top: 5vh;
+        }
+        .contact-wrap {
+        }
+        .hamburger {
+            display: block;
+            position: fixed;
+            bottom: 5vh;
+            left: 4vw;
+            z-index: 1001;
+        }
+        .mob-nav-wrapper {
+            width: 100vw;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: whitesmoke;
+            z-index: 1000;
+        }
+    }
+}
+
+
+//hamburger css
+
+.btn {
+    width: 50px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  span {
+    display: block;
+    width: 100%;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+    border-radius: 3px;
+    height: 3px;
+    transition: all .3s;
+    position: relative;
+  }
+  
+  span + span {
+    margin-top: 14px;
+  }
+  
+  .active span:nth-child(1) {
+    background: black;
+    animation: ease .7s top forwards;
+    animation-delay: .3s;
+  }
+  
+  .not-active span:nth-child(1) {
+    background: #fff;
+    animation: ease .7s top-2 forwards;
+    // animation-delay: .3s;
+  }
+  
+  .active span:nth-child(2) {
+    background: black;
+    animation: ease .7s scaled forwards;
+    animation-delay: .3s;
+  }
+  
+  .not-active span:nth-child(2) {
+    background: #fff;
+    animation: ease .7s scaled-2 forwards;
+    // animation-delay: .3s;
+  }
+  
+  .active span:nth-child(3) {
+    background: black;
+    animation: ease .7s bottom forwards;
+    animation-delay: .3s;
+  }
+  
+  .not-active span:nth-child(3) {
+    background: #fff;
+    animation: ease .7s bottom-2 forwards;
+    // animation-delay: .3s;
+  }
+  
+  @keyframes top {
+    0% {
+      top: 0;
+      transform: rotate(0);
+    }
+    50% {
+      top: 16px;
+      transform: rotate(0);
+    }
+    100% {
+      top: 16px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes top-2 {
+    0% {
+      top: 16px;
+      transform: rotate(45deg);
+    }
+    50% {
+      top: 16px;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 0;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes bottom {
+    0% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+    50% {
+      bottom: 18px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 18px;
+      transform: rotate(135deg);
+    }
+  }
+  
+  @keyframes bottom-2 {
+    0% {
+      bottom: 18px;
+      transform: rotate(135deg);
+    }
+    50% {
+      bottom: 18px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes scaled {
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes scaled-2 {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  //hamburger css end

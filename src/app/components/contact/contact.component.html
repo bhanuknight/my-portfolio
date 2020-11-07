@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div class="page-name">Contact</div>
+    <div class="hyphen"></div>
+    <div class="tag-line">Have a project?</div>
+    <div class="form">
+        <div class="heading">What can I do for you?</div>
+        <div class="radios">
+            <div class="radio-button" (click)="contactBody.type = 'Design'" [ngClass]="{'selected' : contactBody.type === 'Design'}">Design</div>
+            <div class="radio-button" (click)="contactBody.type = 'Development'" [ngClass]="{'selected' : contactBody.type === 'Development'}">Development</div>
+            <div class="radio-button" style="margin: 0;" (click)="contactBody.type = 'Other'" [ngClass]="{'selected' : contactBody.type === 'Other'}">Other</div>
+        </div>
+        <div class="input-group">
+            <div class="half">
+                <input type="text" name="namee" #namee="ngModel" [(ngModel)]="contactBody.name" placeholder="Your name" style="text-transform: capitalize;">
+            </div>
+            <div class="half" style="margin: 0;">
+                <input type="text" name="email" #email="ngModel" [(ngModel)]="contactBody.email" placeholder="Your email">
+            </div>
+            <div class="full">
+                <textarea name="message" #message="ngModel" [(ngModel)]="contactBody.message" placeholder="Details" rows="3"></textarea>
+            </div>
+            <button class="submit" [disabled]="validate()" (click)="submit()">Send request</button>
+        </div>
+    </div>
+    <div class="hint">
+        <p>
+            Tell me about your vision: Which challenges are you facing? What are your goals and expectations? What  would success look like and how much are you planning to spend to get there?
+        </p>
+    </div>
+</div>
+
+<div class="not" *ngIf="showNot" [@fadeInOut]>Request Sent!</div>

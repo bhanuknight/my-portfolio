@@ -1,0 +1,20 @@
+<div class="nav-wrapper">
+    <ul class="ul" [ngClass]="{'darken' : currentNav == 'portraits'}">
+        <li (click)="emitNav('about')" class="one" [ngClass]="{'down' : !toggle, 'selected' : currentNav == 'about'}">
+            About
+            <div class="underline"></div>
+        </li>
+        <li (click)="emitNav('clients')" class="two" [ngClass]="{'down' : !toggle, 'selected' : currentNav == 'clients'}">
+            Works
+            <div class="underline"></div>
+        </li>
+        <li (click)="emitNav('portraits')" class="three" [ngClass]="{'down' : !toggle, 'selected2' : currentNav == 'portraits'}">
+            Portraits
+            <div class="underline"></div>
+        </li>
+        <li (click)="emitNav('contact')" class="four" [ngClass]="{'down' : !toggle, 'selected' : currentNav == 'contact'}">
+            Contact
+            <div class="underline"></div>
+        </li>
+    </ul>
+</div>

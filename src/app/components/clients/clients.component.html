@@ -1,0 +1,66 @@
+<div class="clients-wrapper" id="scroll-box">
+    <div class="client-box" *ngIf="dubai" [@fadeInOut]>
+        <div class="info" id="dubai-info">
+            <div class="logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/dubai-logo.png?alt=media&token=42f399f6-b068-49a1-b975-5c8f2766263d">
+            </div>
+            <div class="summary">
+                <p>A multi-lingual website for Dubai Sports Council's Annual Sports Conference</p>
+            </div>
+            <div class="tech-stack">
+                <p style="color: whitesmoke;">Web Development</p>
+                <br>
+                <p>Angular 5, Typescript, RxJs, SCSS, HTML, Web API</p>
+            </div>
+            <a href="https://dubaiisc.ae/" target="_blank">Visit site</a>
+        </div>
+        <div class="visual">
+            <div class="video-box" *ngIf="showDubai" [@fadeInOut2]>
+                <!-- <img src="../../../assets/screen.jpg"> -->
+                <video id="dubai-video" src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/dubai-video.mp4?alt=media&token=50f00de0-dda2-41b9-bd8a-9ca71f9ce4f0" autoplay loop></video>
+            </div>
+        </div>
+    </div>
+    <div class="client-box" *ngIf="delhivery" [@fadeInOut]>
+        <div class="info" id="delhi-info">
+            <div class="logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/delhivery-logo.png?alt=media&token=3a5fa092-b92e-41ed-bd78-f4e98ddea3cc">
+            </div>
+            <div class="summary">
+                <p>Website for Delhivery's mapping of conatainment zones in India.</p>
+            </div>
+            <div class="tech-stack">
+                <p style="color: whitesmoke;">Web Development</p>
+                <br>
+                <p>Angular 8, Typescript, RxJs, SCSS, HTML, Web API, SVG, Adobe Illustrator</p>
+            </div>
+            <a href="https://maps.delhivery.com/covid/" target="_blank">Visit site</a>
+        </div>
+        <div class="visual">
+            <div class="video-box" *ngIf="showDelhivery" [@fadeInOut2]>
+                <!-- <img src="../../../assets/screen.jpg"> -->
+                <video id="del-video" src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/dell-video.mp4?alt=media&token=8b4e28a9-0cdf-43d5-87f7-610d82f7a41d" autoplay loop></video>
+            </div>
+        </div>
+    </div>
+    <div class="client-box" *ngIf="dinehour" [@fadeInOut]>
+        <div class="info" id="dine-info">
+            <div class="logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/dine-logo.png?alt=media&token=bca99aa9-f48c-48f5-9fdb-5e75be3fa3de">
+            </div>
+            <div class="summary">
+                <p>Website mockups and branding work for Dinehour.</p>
+            </div>
+            <div class="tech-stack">
+                <p style="color: whitesmoke;">UI/UX & Branding</p>
+                <br>
+                <p>Adobe Illustrator, Photoshop</p>
+            </div>
+        </div>
+        <div class="visual2">
+            <div class="video-box" *ngIf="showDine" [@fadeInOut2]>
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/dine-scroll.jpg?alt=media&token=695590f4-0857-4542-a3ee-b7f99c75cb9a">
+            </div>
+        </div>
+    </div>
+</div>

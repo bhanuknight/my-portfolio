@@ -1,0 +1,39 @@
+<div class="main-board" [ngClass]="{'whiten' : page === 'portraits'}">
+  <div *ngIf="page === '' || page === 'home'" [@fadeInOut] [ngClass]="{'text-wrap': page === '', 'side-wrap': page === 'home'}">
+    <basic-info style="width: 100%;" (stateChange)="goToHome()"></basic-info>
+  </div>
+  <div class="frame-wrap" *ngIf="page === 'home'" [@fadeInOut]>
+    <profile></profile>
+  </div>
+  <lines *ngIf="page !== ''" style="z-index: 0;"></lines>
+  <div *ngIf="page === 'home'" class="social-wrap" [@fadeInOut]>
+    <social></social>
+  </div>
+  <div *ngIf="page !== ''" class="nav-wrap" [ngClass]="{'top-nav' : page === 'clients' || page === 'portraits'}">
+    <navigation></navigation>
+  </div>
+  <div *ngIf="page === 'home'" class="about-wrap" [@fadeInOut]>
+    <about></about>
+  </div>
+  <div *ngIf="page === 'clients'" class="clients-wrap" [@fadeInOut]>
+    <clients></clients>
+  </div>
+  <div *ngIf="page === 'portraits'" class="port-wrap" [@fadeInOut]>
+    <portraits></portraits>
+  </div>
+  <div *ngIf="page === 'contact'" class="contact-wrap" [@shutter]>
+    <contact></contact>
+  </div>
+  <div class="hamburger" *ngIf="page !== ''">
+    <div class="btn" (click)="isOpen = !isOpen" [ngClass]="isOpen ? 'active' : 'not-active'">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mob-nav-wrapper" *ngIf="isOpen" [@slideUp]>
+    <navigation-mob></navigation-mob>
+  </div>
+</div>
+
+<!-- [ngClass]="{isOpen ? 'active' : 'not-active'}" -->

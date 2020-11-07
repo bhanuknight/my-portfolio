@@ -1,0 +1,65 @@
+.social-wrapper {
+  width: 5vh;
+  transition: all 1s ease;
+  .social {
+    width: 100%;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: width .5s ease;
+    -webkit-tap-highlight-color: transparent;
+    &:hover {
+      width: 110%;
+      // padding: 10px 0 !important;
+      filter: invert(0.9);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.instac {
+  transition: all .4s ease;
+  transition-delay: 0;
+}
+
+.linkc {
+  transition: all .8s ease;
+  transition-delay: .4;
+}
+
+.hackc {
+  transition: all 1s ease;
+  transition-delay: .8;
+}
+
+.insta {
+  transform: translateY(-100%);
+}
+
+.link {
+  transform: translateY(-200%);
+}
+
+.hack {
+  transform: translateY(-300%);
+}
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  .social-wrapper {
+    width: 7vh;
+  }
+
+  .insta {
+    transform: translateY(100%);
+  }
+  
+  .link {
+    transform: translateY(200%);
+  }
+  
+  .hack {
+    transform: translateY(300%);
+  }
+}

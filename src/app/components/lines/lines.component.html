@@ -1,0 +1,18 @@
+<div class="wrap-all" *ngIf="all">
+    <div class="left-line">
+        <div class="top" *ngIf="top">
+            <div class="line" [@drawin]></div>
+        </div>
+        <div class="bottom">
+            <div class="line" [@drawin2]></div>
+        </div>
+    </div>
+    <div class="right-line">
+        <div class="top">
+            <div class="line" [@drawin]></div>
+        </div>
+        <div class="bottom" *ngIf="bottom">
+            <div class="line" [@drawin2]></div>
+        </div>
+    </div>
+</div>

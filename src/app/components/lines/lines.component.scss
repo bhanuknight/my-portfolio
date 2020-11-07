@@ -1,0 +1,83 @@
+.wrap-all {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .left-line {
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 4vh;
+    .top {
+      position: absolute;
+      top: -6.5vh;
+      left: 14.5vh;
+      height: 30vh;
+      // width: 100%;
+      transform: rotate(45deg);
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 81%;
+      // width: 100%;
+    }
+    .line {
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #ffffff1c;
+    }
+  }
+  .right-line {
+    float: right;
+    position: relative;
+    height: 100%;
+    width: 9vh;
+    .top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 40vh;
+      // width: 100%;
+    }
+    .bottom {
+      position: absolute;
+      top: 27vh;
+      right: 39.5vh;
+      height: 86.6vh;
+      // width: 100%;
+      transform: rotate(45deg);
+    }
+    .line {
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #ffffff1c;
+    }
+  }
+}
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  .wrap-all {
+    .left-line {
+      float: right;
+      .top {
+        left: 8vh;
+      }
+      .bottom {
+        right: 6.5vh;
+      }
+    }
+    .right-line {
+      display: none;
+    }
+  }
+}

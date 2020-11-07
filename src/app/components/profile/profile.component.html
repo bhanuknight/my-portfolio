@@ -1,0 +1,15 @@
+<div class="wrap-all">
+    <div class="skills">
+        <ul>
+            <li [ngClass]="{'hidden': !list, 'show': list, 'strike': strike}" class="one mob-hid">Billionare</li>
+            <li [ngClass]="{'hidden': !list, 'show': list, 'strike': strike}" class="two mob-hid">Playboy</li>
+            <li [ngClass]="{'hidden': !list, 'show': list, 'strike': strike}" class="three mob-hid">Philanthropist</li>
+            <li [ngClass]="{'hidden': !strike, 'show': strike}" class="one">Web Developer</li>
+            <li [ngClass]="{'hidden': !strike, 'show': strike}" class="two">Graphic Designer</li>
+            <li [ngClass]="{'hidden': !strike, 'show': strike}" class="three">Ballpen Artist</li>
+        </ul>
+    </div>
+    <div *ngIf="frame" class="frame" [@fadeInOut]>
+        <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/profile-pic.jpg?alt=media&token=b3c3e50a-a979-4730-9033-47b89178c2c9">
+    </div>
+</div>

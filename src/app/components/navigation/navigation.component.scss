@@ -1,0 +1,76 @@
+.nav-wrapper {
+  float: left;
+  .ul {
+    padding: 0;
+    list-style: none;
+    font-family: main-font;
+    font-size: 18px;
+    color: whitesmoke;
+    float: left;
+    li {
+      margin-left: calc(7vh - 20px);
+      float: left;
+      cursor: pointer;
+      position: relative;
+      padding: 0 10px;
+      .underline {
+        width: 0;
+        height: 1px;
+        background-color: whitesmoke;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: all .3s ease;
+      }
+      &:hover {
+        .underline {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.darken {
+  color: black !important;
+  li {
+    .underline {
+      background-color: black !important;
+    }
+  }
+}
+
+.selected {
+  background: white;
+  color: black;
+}
+
+.selected2 {
+  background: black;
+  color: white;
+}
+
+.down {
+  transform: translateY(200%);
+  opacity: 0;
+}
+
+.one {
+  transition: all .5s ease;
+  transition-delay: .2s;
+}
+
+.two {
+  transition: all .5s ease;
+  transition-delay: .3s;
+}
+
+.three {
+  transition: all .5s ease;
+  transition-delay: .4s;
+}
+
+.four {
+  transition: all .5s ease;
+  transition-delay: .5s;
+}

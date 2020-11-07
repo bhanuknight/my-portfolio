@@ -1,0 +1,122 @@
+.clients-wrapper {
+  width: 100%;
+  float: left;
+  font-family: port-font;
+  height: 85vh;
+  overflow: auto;
+  .client-box {
+    width: 100%;
+    margin: 4% 0;
+    display: flex;
+    .info {
+      width: 65%;
+      transition: all .3s ease;
+      .summary {
+        width: 100%;
+        font-size: 3.5vh;
+        color: black;
+        margin-top: 30%;
+      }
+    }
+    .visual {
+      width: 45%;
+      height: 70vh;
+      .video-box {
+        width: 100%;
+        height: 100%;
+        // overflow: hidden;
+        opacity: 0;
+        position: relative;
+        img {
+          width: 90%;
+          position: absolute;
+          right: 10%;
+        }
+      }
+    }
+  }
+  // &::before {
+  //   content: "";
+  //   width: 100%;
+  //   height: 10%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   background: linear-gradient(rgb(237 237 237), #ffffff00);
+  //   z-index: 1;
+  // }
+}
+
+.unhid {
+  opacity: 1 !important;
+  transition: opacity .8s ease;
+}
+
+@keyframes scroll {
+  from {transform: translateY(0);}
+  to {transform: translateY(-80%);}
+}
+
+#scroll-box::-webkit-scrollbar {
+  width: 6px;
+  // background-color: #F5F5F5;
+}
+
+#scroll-box::-webkit-scrollbar-thumb {
+  background-color: #b6b6b6;
+  border-radius: 10px;
+}
+
+#scroll-box::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: rgba($color: #000000, $alpha: 0.0);
+}
+
+@media screen and (orientation:portrait) {
+  /* Portrait styles */
+  .clients-wrapper {
+    height: 95vh;
+    .client-box {
+      flex-wrap: wrap;
+      margin: 0;
+      .info {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .logo {
+          width: 20vh;
+          margin-bottom: 15px;
+        }
+        .summary, .tech-stack {
+          font-size: 3vh;
+          text-align: center;
+          margin-bottom: 40px;
+          margin-top: 0;
+        }
+      }
+      .visual {
+        width: 100%;
+        height: 70vh;
+        .video-box {
+          img {
+            width: 100%;
+            right: 0;
+          }
+        }
+      }
+      .visual2 {
+        width: 100%;
+        height: 70vh;
+      }
+    }
+    .mob {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  .mobbot {
+  margin-bottom: 50px !important;
+  }
+}

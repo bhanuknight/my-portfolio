@@ -1,0 +1,85 @@
+<div class="clients-wrapper" id="roll-box">
+    <div class="client-box" *ngIf="dubai" [@fadeInOut]>
+        <div class="info">
+            <div class="summary mobbot" style="margin: 0;">
+                <p>Drawing ballpen portraits is one of my favourite things to do.
+                    <br>Here are some of the pieces that I drew lately
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="client-box" *ngIf="dubai" [@fadeInOut]>
+        <div class="info" id="dubai-info">
+            <div class="summary">
+                <h2>Sherlock</h2>
+                <p>I’m not a phsycopath, I’m a high functioning Sociopath.</p>
+            </div>
+        </div>
+        <div class="visual">
+            <div class="video-box" [ngClass]="{'unhid' : showDubai}">
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/sherlock.png?alt=media&token=47e98e23-c63a-40ac-9c62-381897b054e8">
+            </div>
+        </div>
+    </div>
+    <div class="client-box mob" *ngIf="delhivery" [@fadeInOut]>
+        <div class="visual">
+            <div class="video-box" [ngClass]="{'unhid' : showDelhivery}">
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/old.png?alt=media&token=f103bcb2-a350-44ad-b08c-a56476efbbad">
+            </div>
+        </div>
+        <div class="info" id="delhi-info">
+            <div class="summary">
+                <h2>Wrinkles</h2>
+                <p>My story is one of many thousands and the world will not suffer if it ends too soon.</p>
+            </div>
+        </div>
+    </div>
+    <div class="client-box" *ngIf="dinehour" [@fadeInOut]>
+        <div class="info" id="dine-info">
+            <div class="summary">
+                <h2>Eyes Talk</h2>
+                <p>It's the best feeling when practice makes it your second nature.</p>
+            </div>
+        </div>
+        <div class="visual">
+            <div class="video-box" [ngClass]="{'unhid' : showDine}">
+                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-d7570.appspot.com/o/girl.png?alt=media&token=becba7a0-3179-4a20-b7df-2a45ebd289dd">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="client-box" *ngIf="delhivery" [@fadeInOut]>
+        <div class="info" id="delhi-info">
+            <div class="logo">
+                <img src="../../../assets/delhivery-logo.png">
+            </div>
+            <div class="summary">
+                <p>Website for Delhivery's mapping of conatainment zones in India.</p>
+            </div>
+        </div>
+        <div class="visual">
+            <div class="video-box" *ngIf="showDelhivery">
+                <img src="../../../assets/screen.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="client-box" *ngIf="dinehour" [@fadeInOut]>
+        <div class="info" id="dine-info">
+            <div class="logo">
+                <img src="../../../assets/dine-logo.png">
+            </div>
+            <div class="summary">
+                <p>Website mockups and branding work for Dinehour.</p>
+            </div>
+            <div class="tech-stack">
+                <p style="color: whitesmoke;">UI/UX & Branding</p>
+                <br>
+                <p>Adobe Illustrator, Photoshop</p>
+            </div>
+        </div>
+        <div class="visual2">
+            <div class="video-box" *ngIf="showDine">
+                <img src="../../../assets/dine-scroll.jpg">
+            </div>
+        </div>
+    </div> -->
+</div>
